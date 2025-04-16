@@ -507,4 +507,12 @@ if __name__ == "__main__":
     # --- Start GLUT Main Loop ---
     print("Starting GLUT main loop...")
     last_fps_update_time = time.time() # Initialize FPS timer start
+
+
+    config_loader = ConfigLoader()
+    config_loader.config_path = "./configuration"
+    config_loader.config_filename = "demo1"
+
+    sim = config_loader.preload_config()
+
     glutMainLoop()
